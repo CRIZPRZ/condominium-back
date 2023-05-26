@@ -25,7 +25,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'street' => 'required',
-            'number' => 'required|numeric',
+            'number' => 'required|string',
             'zip' => 'numeric',
         ];
     }

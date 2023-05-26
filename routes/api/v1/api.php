@@ -1,14 +1,14 @@
 <?php
 
-use App\Http\Controllers\api\v1\admin\AbonoController;
+
 use App\Http\Controllers\api\v1\admin\ChargeController;
 use App\Http\Controllers\api\v1\admin\MovementController;
+use App\Http\Controllers\api\v1\admin\PaymentController;
 use App\Http\Controllers\api\v1\admin\PDFController;
 use App\Http\Controllers\api\v1\admin\propertyController;
 use App\Http\Controllers\api\v1\admin\SettingController;
 use App\Http\Controllers\api\v1\admin\UserController;
 use App\Http\Controllers\api\v1\admin\UserPropertyController;
-use App\Http\Controllers\api\v1\adminPDFController;
 use App\Http\Controllers\api\v1\auth\LoginController;
 use App\Http\Controllers\api\v1\auth\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -45,7 +45,7 @@ Route::get('checkCanVoteProperties/{id}', [UserPropertyController::class, 'check
 
 Route::apiResource('movements', MovementController::class);
 Route::apiResource('charges', ChargeController::class);
-Route::apiResource('abonos', AbonoController::class);
+Route::apiResource('payments', PaymentController::class);
 
 
 Route::post('/download-pdf', [PDFController::class, 'downloadPDF']);
